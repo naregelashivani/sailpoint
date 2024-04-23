@@ -1,0 +1,20 @@
+package com.testcases;
+
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.pageEvents.Com_Gobal_setting;
+
+import Utils.ReusableMethods;
+
+public class Global_test extends Base_Class {
+	Com_Gobal_setting setting=new Com_Gobal_setting();
+	ReusableMethods reuse = new ReusableMethods();
+	@Test
+	public void set() throws Exception  {
+		setting.global_details();
+		test = extent.createTest("Shivani");
+		test.pass("LoginPage", MediaEntityBuilder.createScreenCaptureFromPath(reuse.screenShot()).build());
+		setting.add_attribute();
+	}
+}

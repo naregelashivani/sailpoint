@@ -1,0 +1,39 @@
+package com.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+
+public class AddApplication_test extends Base_Class {
+	   ExtentReports extent;
+
+	    public static ExtentSparkReporter html;
+		@BeforeSuite
+	    public void report() {
+	        extent = new ExtentReports();
+	        html = new ExtentSparkReporter("./reports/" + "extentReports.html");
+	        extent.attachReporter(html);
+	        
+	    }
+	@Test
+	public void addapplication() throws Exception {
+		report();
+		extent.createTest("Test Reports");
+		
+	 
+		
+	}
+	
+	@AfterSuite
+	public void flush() {
+		extent.flush();
+		
+	}
+
+}

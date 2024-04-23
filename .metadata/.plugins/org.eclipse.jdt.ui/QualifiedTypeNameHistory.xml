@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+    <fullyQualifiedTypeName name="com.github.dockerjava.api.model.Driver"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.ExtentSparkReporter"/>
+    <fullyQualifiedTypeName name="org.bouncycastle.jcajce.provider.symmetric.ChaCha.BaseCC20P1305"/>
+    <fullyQualifiedTypeName name="io.github.bonigarcia.wdm.WebDriverManager"/>
+    <fullyQualifiedTypeName name="Base.BaseClass"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.MediaEntityBuilder"/>
+</qualifiedTypeNameHistroy>

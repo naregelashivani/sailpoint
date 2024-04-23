@@ -1,0 +1,25 @@
+package com.pageEvents;
+
+import org.openqa.selenium.support.ui.Select;
+
+import com.pageobject.Global_Setting;
+import com.testcases.Base_Class;
+
+public class Com_Gobal_setting extends Base_Class {
+	
+	Global_Setting global=new Global_Setting();
+	
+public void global_details() {
+	driver.findElement(global.Gobal).click();
+	driver.findElement(global.setting).click();
+	driver.findElement(global.identity_mapping).click();
+	driver.findElement(global.Email).click();
+	driver.findElement(global.Add_source).click();
+	driver.findElement(global.text).sendKeys("test1");
+	driver.findElement(global.select_application);
+	Select dropdown = new Select(driver.findElement(global.select_dropdown));
+  dropdown.selectByVisibleText("test1");
+  driver.findElement(global.attribute).click();
+  driver.findElement(global.save).click();
+}
+}

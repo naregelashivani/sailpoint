@@ -1,0 +1,41 @@
+package com.testcases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.pageEvents.debug;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class debug_mode extends Base_Class{
+	debug debug_test=new debug();
+	@Test
+public void setup() {
+		
+		WebDriverManager.chromedriver().setup();
+		driver =new ChromeDriver();
+		driver.manage().window().maximize();
+		Logger	log = LogManager.getLogger();
+		driver.get(baseUrl);
+		driver.findElement(By.name("loginForm:accountId")).sendKeys(Username);
+		driver.findElement(By.name("loginForm:password")).sendKeys(password);
+		driver.findElement(By.name("loginForm:loginButton")).click();
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+		driver.get("http://localhost:8080/identityiq/debug/debug.jsf");
+		
+		
+	}
+	@Test
+	public void test_debug() throws Exception {
+		debug_test.debug_setting("Test1");
+		
+		
+	}
+
+}

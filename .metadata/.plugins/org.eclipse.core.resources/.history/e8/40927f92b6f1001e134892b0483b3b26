@@ -1,0 +1,21 @@
+package com.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import com.pageobject.Add_new_Application;
+
+public class AddApplication_test extends Base_Class {
+	
+	@Test
+	public void addapplication() throws Exception {
+		
+		Add_new_Application AP = new Add_new_Application(driver);	
+	    AP.visitApp();
+	    AP.Details();
+	    AP.configuration_detail();
+		
+		
+	}
+
+}

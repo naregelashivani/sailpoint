@@ -1,0 +1,24 @@
+package com.testcases;
+
+import com.aventstack.extentreports.ExtentTest;
+
+public class extendManager2 {
+	private extendManager2() {
+		 
+	}
+	private static ThreadLocal<ExtentTest>extTest=new ThreadLocal<ExtentTest>();
+	static ExtentTest getExtentTest()
+	{
+		return extTest.get();
+ 
+	}
+	 static void setExtentTest(ExtentTest test)
+	{
+		extTest.set(test);
+ 
+	}
+	static void unload() {
+		extTest.remove();
+	}
+ 
+}

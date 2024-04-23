@@ -1,0 +1,13 @@
+package com.testcases;
+
+import org.testng.annotations.Test;
+
+import com.pageEvents.Com_set_up_task;
+
+public class Set_Up_test {
+	Com_set_up_task task=new Com_set_up_task();
+	@Test
+	public void set() {
+		task.new_task();
+	}
+}

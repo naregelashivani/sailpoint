@@ -1,0 +1,33 @@
+package com.pageEvents;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.support.ui.Select;
+
+import com.pageobject.Global_Setting;
+import com.testcases.Base_Class;
+
+public class Com_Gobal_setting extends Base_Class {
+	
+	Global_Setting global=new Global_Setting();
+	
+public void global_details() throws Exception {
+	driver.findElement(global.Gobal).click();
+	driver.findElement(global.setting).click();
+	driver.findElement(global.identity_mapping).click();
+	driver.findElement(global.Email).click();
+	driver.findElement(global.Add_source).click();
+	driver.findElement(global.text).sendKeys("test1");
+	Thread.sleep(3000);
+	 Robot robot = new Robot();
+	 robot.keyPress(KeyEvent.VK_ENTER);
+   robot.keyRelease(KeyEvent.VK_ENTER);
+	//driver.findElement(global.select_application).click();
+   Thread.sleep(3000);
+	Select dropdown22 = new Select(driver.findElement(global.select_dropdown));
+  dropdown22.selectByVisibleText("LastName");
+  driver.findElement(global.attribute).click();
+  driver.findElement(global.save).click();
+}
+}

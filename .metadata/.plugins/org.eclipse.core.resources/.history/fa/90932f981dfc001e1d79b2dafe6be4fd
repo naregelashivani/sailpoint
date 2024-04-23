@@ -1,0 +1,13 @@
+package com.testcases;
+
+import org.testng.annotations.Test;
+
+import com.pageEvents.Com_Gobal_setting;
+
+public class Global_test extends Base_Class {
+	Com_Gobal_setting setting=new Com_Gobal_setting();
+	@Test
+	public void set()  {
+		setting.global_details();
+	}
+}

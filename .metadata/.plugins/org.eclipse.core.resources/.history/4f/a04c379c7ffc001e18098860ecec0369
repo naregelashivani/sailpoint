@@ -1,0 +1,31 @@
+package com.pageEvents;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.support.ui.Select;
+
+import com.pageobject.debug_mode;
+import com.testcases.Base_Class;
+
+public class debug extends Base_Class {
+	debug_mode debug=new debug_mode();
+	public void debug_setting() throws Exception {
+		driver.findElement(debug.application_name).sendKeys("Application");
+		driver.findElement(debug.Search_application).click();
+		Thread.sleep(3000);
+		 Robot robot = new Robot();
+		 robot.keyPress(KeyEvent.VK_ENTER);
+	   robot.keyRelease(KeyEvent.VK_ENTER);
+		driver.findElement(debug.search_name).sendKeys("shivani");
+		Thread.sleep(3000);
+		 Robot robot1= new Robot();
+		 robot1.keyPress(KeyEvent.VK_ENTER);
+	   robot1.keyRelease(KeyEvent.VK_ENTER);
+//	   driver.findElement(debug.search_action).click();
+//	   driver.findElement(debug.delete_or_new).click();
+//		
+		
+	}
+
+}

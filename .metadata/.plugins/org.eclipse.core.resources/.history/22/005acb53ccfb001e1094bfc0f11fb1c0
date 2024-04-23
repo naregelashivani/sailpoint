@@ -1,0 +1,20 @@
+package com.pageobject;
+
+import org.openqa.selenium.By;
+
+public class Add_New_Set_Up {
+	public By setup  = By.xpath("(//a[@class='dropdown-toggle'])[5]");
+	public By Task=By.xpath("//a[contains(text(),'Tasks')]");
+	public By New_task=By.xpath("(//span[@class='x-btn-inner'])[1]");
+	public By Account_details=By.xpath("(//span[@class='x-menu-item-text'])[1]");
+	public By Name_details=By.xpath("//input[@name='editForm:name']");
+	public By Scan=By.xpath("//input[contains(@id, 'baseSuggest-1057-inputEl')]");
+	public By Save_execute=By.xpath("(//span[contains(@class,'ui-button-text ui-c')])[8]");
+	public By drop_down=By.xpath("//div[contains(@id,'ext-gen1125')]");
+	public By select_drop_down=By.xpath("//input[contains(@id,'baseSuggest-1057-inputEl')]");
+	public By click_ok=By.xpath("(//span[contains(@class,'x-btn-inner')])[6]");
+}
+//Application_dropdown.click();
+//Select dropdown = new Select(Application_dropdown);
+//   dropdown.selectByVisibleText("JDBC");
+//   Authoritative_check.click();

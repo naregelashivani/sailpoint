@@ -1,0 +1,27 @@
+package com.utilities;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import com.google.common.io.Files;
+import com.testcases.Base_Class;
+
+
+
+public class Reusablemethods extends Base_Class {
+	
+	public String screenShot() throws Exception
+	{
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File srcFile=ts.getScreenshotAs(OutputType.FILE);
+		File drcFile=new File("./ScreenShots/" + "image.jpg");
+		Files.copy(srcFile, drcFile);
+		return drcFile.getAbsolutePath();
+	}
+	
+	
+
+}

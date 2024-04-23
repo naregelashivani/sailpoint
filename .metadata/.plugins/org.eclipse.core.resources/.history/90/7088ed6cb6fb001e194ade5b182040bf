@@ -1,0 +1,23 @@
+package com.pageEvents;
+
+import org.openqa.selenium.support.ui.Select;
+
+import com.pageobject.Add_New_Set_Up;
+import com.testcases.Base_Class;
+
+public class Com_set_up_task extends Base_Class {
+	Add_New_Set_Up Add_set=new Add_New_Set_Up();
+	
+	public void new_task() {
+		driver.findElement(Add_set.setup).click();
+		driver.findElement(Add_set.Task).click();
+		driver.findElement(Add_set.New_task).click();
+		driver.findElement(Add_set.Account_details).click();
+		driver.findElement(Add_set.Name_details).sendKeys("shivani12");
+		Select appType = new Select(driver.findElement(Add_set.Scan));
+		appType.selectByVisibleText("shivani");
+		
+	}
+	
+
+}

@@ -1,0 +1,10 @@
+package com.pageobject;
+
+import org.openqa.selenium.By;
+
+public class Add_New_Set_Up {
+	public By setup  = By.xpath("(//a[@class='dropdown-toggle'])[5]");
+	public By Task=By.xpath("//a[@class='menuitem'])[20]");
+	public By New_task=By.xpath("(//span[@class='x-btn-inner'])[1]");
+
+}
